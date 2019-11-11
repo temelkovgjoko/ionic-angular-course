@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Metals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-metal-item *ngFor="let metal of metals" [metalItem]="metal"></app-metal-item>
+  </ion-list>
+</ion-content>

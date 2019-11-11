@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/metals"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedMetal.title}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDeleteMetal()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <!-- IMAGE -->
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="loadedMetal.imageUrl"></ion-img>
+      </ion-col>
+      <!-- TITLE -->
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{loadedMetal.title}}</h1>
+      </ion-col>
+    </ion-row>
+    <!-- ATOMIC NUMBER -->
+    <ion-row>
+      <ion-col>
+        <ion-item><b>Atomic Number:&nbsp; </b> {{ loadedMetal.atomicNumber}}</ion-item>
+      </ion-col>
+    </ion-row>
+    <!-- NEUTRONS -->
+    <ion-row>
+      <ion-col>
+        <ion-item><b>Neutrons:&nbsp;</b> {{ loadedMetal.neutrons}}</ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
