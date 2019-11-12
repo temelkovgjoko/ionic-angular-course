@@ -12,10 +12,11 @@ export class MetalsPage implements OnInit {
   metals: Metal[];
   constructor(
     private metalsService: MetalsService,
-    
+
   ) { }
 
   ngOnInit() {
     this.metals = this.metalsService.getAllMetals()
+    console.log(this.metals)
   }
 }
